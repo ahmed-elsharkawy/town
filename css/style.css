@@ -1,0 +1,615 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.container{
+    max-width: 1270px;
+    margin: auto;
+}
+.window{
+    position: relative;
+    height: 800px;
+    background-image: url('../img/the-town-bg-01.jpg');
+    background-attachment: fixed;
+}
+nav{
+    width: 100%;
+    height: 70px;
+    background-color:hsl(0, 0%, 100%, 0.0);
+    color: #fff;
+    position: fixed;
+    transition: 0.25s ease all;
+    z-index: 5;
+}
+nav h2{
+    margin-left: 5%;
+    float: left;
+    line-height: 65px;
+    font-size: 27px;
+}
+nav .slideIcon{
+    display: none;
+    border-radius: 5px;
+    border: 0.5px solid #ccc;
+    opacity: 0.7;
+    transition: 0.25s all ease;
+}
+nav .slideIcon:hover{
+    cursor: pointer;
+    opacity: 0.9;
+    box-shadow: 1px 1px 2px #eee;
+}
+nav .slideIcon img{
+    width: 100%;
+}
+nav ul{
+    list-style: none;
+    float: right;
+    font-size: 24px;
+    width: 40%;
+    display: flex;
+    justify-content: space-evenly;
+}
+nav ul li{
+    float: left;
+    line-height: 65px;
+}
+nav ul li a{
+    text-decoration: none;
+    color: #fff;
+}
+.slideDownLinkColor{
+    color: #9c9c9c;
+}
+.slideDown{
+    border-bottom: 1px solid #ededed;
+    background-color: #fff;
+    color: #9c9c9c;
+}
+
+
+.intro{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 30%;
+    text-align: center;
+    color: #fff;
+} 
+.intro h2{
+    font-size: 150px;
+    text-shadow: 5px 5px 5px #777;
+}
+.intro p{
+    font-size: 25px;
+}
+
+.arrow{
+    width: 100%;
+    height: 100px;
+    position: absolute;
+    top: 80%;
+    text-align: center;
+}
+.arrow a{
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: #fff;
+    transition: 0.5s all ease;
+}
+.arrow a i{
+    color: sienna;
+    font-size: 60px;
+    line-height: 80px;    
+    transition: 0.5s all ease;
+}
+.arrow a:hover{
+    background-color: sienna;
+}
+.arrow a:hover i{
+    color: #fff;
+}
+
+@media (max-width :768px){
+    .window{
+        height: 850px;
+    }
+    nav h2{
+        float: left;
+        line-height: 65px;
+        font-size:25px;
+        margin-left: 40px;
+    }
+    nav .slideIcon{
+        display: block;
+        width: 60px;
+        height: 60px;
+        position: absolute;
+        right: 30px;
+        top: 5px;
+        background-color: transparent;
+    }
+    .intro{
+        top: 50%;
+    }
+    .intro h2{
+        font-size: 50px;
+        text-shadow: 1px 1px 1px #777;
+    }
+    nav ul{
+        margin-top: -270px;
+        display: flex;
+        flex-wrap: wrap;
+        width:100%;
+        height: 200px;
+        background-color:#fff;
+        transition: 0.5s all ease;
+    }.slideMenuStyle{
+        margin-top: 5px;
+    }   
+    nav ul li{
+        width: 100%;
+        text-align: center;
+    }
+    nav ul li a{
+        color: #9c9c9c;
+    }
+}
+@media (min-width :769px) and (max-width :992px){
+    .window{
+        height: 850px;
+    }
+    nav h2{
+        width: 25%;
+        float: left;
+        line-height: 65px;
+        font-size:30px;
+        margin-left: 50px;
+    }
+    nav ul{
+        width: 50%;
+        margin-right: 50px;
+        font-size: 22px;
+    }
+    .intro{
+        top: 40%;
+    }
+    .intro h2{
+        font-size: 50px;
+        text-shadow: 1px 1px 1px #777;
+    }
+    
+}
+@media (min-width :993px) and (max-width :1400px){
+    .window{
+        height: 680px;
+    }
+    .intro{
+        top: 30%;
+    }
+    .intro h2{
+        font-size: 100px;
+        text-shadow: 1px 1px 1px #777;
+    }
+    .arrow{
+        top: 75%;
+    }       
+}
+
+
+/* Introduction Part ****************************************************************** */
+
+.information{
+    width: 100%;
+    margin-top: 120px;   
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.info-first-part{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.information .image{
+    width: 50%;
+}
+.information .image img{
+    width: 100%;
+}
+
+.information .info{
+    width: 50%;
+}
+.information .info h3{
+    font-size: 40px;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: lighter;
+    color: teal;
+    margin: 20px 40px;
+}
+.information .info p{
+    font-size: 22px;
+    color: #999;
+    margin: 25px 45px;
+}
+.information .info .readMore{
+    width: 170px;
+    height: 60px;
+    background-color: teal;
+    margin: 20px 50px;
+    border-radius: 5%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.information .info .readMore a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 22px;
+}
+@media (max-width :1300px){
+    .information{   
+        margin-top: 80px;
+    }
+    .information .image{
+        width: 45%;
+        margin: auto;
+    }
+    .information .info{
+        
+    }
+    
+}
+@media (max-width :992px){
+    .information{   
+        width: 80%;
+        margin-top: 80px;
+    }
+    .information .image{
+        width: 80%;
+    }
+    .information .info{
+        width: 90%;
+        margin: auto;
+    }
+    
+}
+@media (max-width :768px){
+    .information{   
+        width: 90%;
+        margin-top: 80px;
+    }
+    .information .image{
+        width: 95%;
+    }
+    .information .info{
+        width: 95%;
+        margin: auto;
+    }
+    .information .info h3{
+        margin: 20px;
+    }
+    .information .info p{
+        margin: 20px;
+    }
+    .information .info .readMore{
+        margin: 20px;
+    }
+}
+
+
+.information .info-second-part{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.information .info-second-part .item{
+    width: 30%;
+    text-align: center;
+    margin-top: 50px;
+}
+.information .info-second-part .item i{
+    margin: 40px;
+    font-size: 75px;
+    color: teal;
+}
+.information .info-second-part .item h4{
+    margin: 20px;
+    font-size: 24px;
+    color: teal;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.information .info-second-part .item p{
+    margin: 20px;
+    font-size: 18px;
+    font-weight: lighter;
+    color: #aaa;
+    text-align: left;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+
+@media (max-width :992px){
+    .information .info-second-part .item{
+        width: 100%;
+        text-align: center;
+        margin-top: 50px;
+    }
+    .information .info-second-part .item i{
+        margin: 40px;
+        font-size: 75px;
+        color: teal;
+    }
+    .information .info-second-part .item h4{
+        margin: 20px;
+        font-size: 24px;
+        color: teal;
+        font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    }
+    .information .info-second-part .item p{
+        margin: 20px;
+        font-size: 18px;
+        font-weight: lighter;
+        color: #aaa;
+        text-align: left;
+        font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    }
+}
+
+
+/* Our Work Part *******************************************************  */
+.our-work{
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-top: 100px;
+}
+
+.our-work-first-part{
+    height: 250px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    justify-content: center;
+}
+.our-work-first-part h2{
+    height: 40%;
+    font-size: 50px;
+    width: 100%;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: teal;
+    font-weight: lighter;
+}
+.our-work-first-part p{
+    height: 60%;
+    width: 55%;
+    font-size: 18px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: #aaa;
+    font-weight: lighter;
+}
+
+.our-work-second-part{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+.our-work-second-part ul{
+    list-style: none;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.our-work-second-part ul li{
+    width: 220px;
+    height: 330px;
+    margin:30px 15px;
+    position: relative;
+    background-size: cover;
+    background-image: url("./img/gallery-img-02.jpg");
+    overflow: hidden;
+}
+.our-work-second-part ul li img{
+    width: 100%;
+    height: 100%;
+}
+.our-work-image-hover{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0.0;
+    background-color:rgb(39, 39, 83);
+    transition: 0.5s all ease;
+}
+.our-work-second-part ul li:hover .our-work-image-hover{
+    cursor: pointer;
+    opacity: 0.5;
+}
+.our-work-image-text{
+    position: absolute;
+    top: 30%;
+    left: 40%;
+    color: #fff;
+    font-size: 30px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 100;
+    opacity: 0.0;
+    transition: 0.5s all ease;
+}
+.our-work-second-part ul li:hover .our-work-image-text{
+    top: 45%;
+    opacity: 1;
+}
+.our-work-image-text span{
+    font-size: 35px;
+    font-weight: bolder;
+}
+.our-work-image-bottom-line{
+    position: absolute;
+    width: 100%;
+    height: 10px;
+    background-color: teal;
+    top: 103%;
+    left: 0;
+    transition: 0.5s all ease;
+}
+.our-work-second-part ul li:hover .our-work-image-bottom-line{
+    top: 97%;
+}
+@media (max-width :992px){
+    .our-work-first-part p{
+        width: 65%;
+    }
+    
+}
+@media (max-width :520px){
+    .our-work-first-part p{
+        width: 80%;
+    }
+    .our-work-second-part ul li{
+        width: 200px;
+        height: 300px;
+        margin:20px 10px;
+    }
+}
+
+
+
+/* Contact Us Part **************************************************** */
+.contact-us{
+    margin-top: 100px;
+    background-image: url("../img/the-town-bg-02.jpg");
+    overflow: hidden;
+    color: #fff;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.contact-us-container{
+    max-width: 1000px;
+    margin: auto;
+}
+.contact-us-first-part{
+    margin-top: 120px;
+}
+.contact-us-first-part h2{
+    font-size: 50px;
+    font-weight: 400;
+    margin: 20px 0;    
+}
+.contact-us-first-part .separate-line{
+    width: 100%;
+    background-color: #fff;
+    height: 2px;
+    margin-bottom: 50px;
+}
+.contact-us-first-part .separate-line .bold-line{
+    width: 270px;
+    height: 10px;
+    background-color: #fff;
+}
+.contact-us-first-part p{
+    margin-top: 30px;
+    font-size: 20px;
+    font-weight: 200;   
+}
+.contact-us-second-part{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+    align-items: center;
+    margin-top: 70px;
+}
+.contact-us-second-part .item{
+    width: 50%;
+    height: 120px;   
+}
+.contact-us-second-part .item a{
+    color: #fff;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+.contact-us-second-part .item a i{
+    margin-right: 20px;
+    font-size: 55px;
+}
+.contact-us-second-part .subscribe form input{
+    width: 250px;
+    height: 45px;
+    border: 1.5px solid #fff;
+    background-color: transparent;
+    border-radius: 5px;
+    color: #fff;
+    padding-left: 50px;
+}
+.contact-us-second-part .subscribe form button{
+    width: 120px;
+    height: 45px;
+    margin-left: 15px;
+    border-radius: 5px;
+    background-color: #fefefe;
+    border: 1px solid #ddd;   
+    font-size: 18px;
+    transition: 0.5s all ease;
+}
+.contact-us-second-part .subscribe form button:hover{
+    background-color: teal;
+    cursor: pointer;
+}
+footer{
+    width: 100%;
+    height: 150px;
+    text-align: center;
+    line-height: 200px;
+    font-size: 15px;
+}
+
+@media (max-width :1200px){
+    .contact-us-container{
+        width: 900px;
+    }
+}
+@media (max-width :992px){
+    .contact-us-container{
+        width: 700px;
+    }
+    .contact-us-second-part .subscribe form{
+        display: flex;
+        flex-wrap: wrap;
+        width: 300px;
+    }
+    .contact-us-second-part .subscribe form button{
+        margin:15px  0;
+    }
+}
+@media (max-width :768px){
+    .contact-us-container{
+        width: 450px;
+    }
+    .contact-us-second-part .item{
+        width: 100%;   
+    }
+    .contact-us-second-part .subscribe form{
+        display: flex;
+        flex-wrap: wrap;
+        width: 420px;
+    }
+    .contact-us-second-part .subscribe form button{
+        margin:0 20px;
+    }
+    footer{
+        height: 100px;
+        line-height: 100px;
+    }
+}
